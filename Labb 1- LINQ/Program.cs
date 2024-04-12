@@ -51,11 +51,11 @@ namespace Labb_1__LINQ
             // änndra ämne
             using (var context = new EducationContext())
             {
-                // Hitta ämnet 'Programmering2'
+               
                 var subject = context.Subjects.FirstOrDefault(s => s.Name == "Programmering2");
                 if (subject != null)
                 {
-                    // Ändra namnet till 'OOP'
+                    
                     subject.Name = "OOP";
                     context.SaveChanges();
                     Console.WriteLine("Ämnet har uppdaterats till 'OOP'.");
