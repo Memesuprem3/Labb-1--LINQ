@@ -52,24 +52,26 @@ namespace Labb_1__LINQ
             using (var context = new EducationContext())
             {
                
-                var subject = context.Subjects.FirstOrDefault(s => s.Name == "Programmering2");
+                var subject = context.Subjects.FirstOrDefault(s => s.Name == "OOP");
                 if (subject != null)
                 {
                     
-                    subject.Name = "OOP";
+                    subject.Name = "Programmering2";
                     context.SaveChanges();
-                    Console.WriteLine("Ämnet har uppdaterats till 'OOP'.");
+                    Console.WriteLine("Ämnet har uppdaterats till 'Programmering2'.");
                 }
                 else
                 {
                     Console.WriteLine("Ämnet 'Programmering2' hittades inte.");
                 }
             }
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
             // byta namn på lärare, dock finns ingen Anas ;'(
             using (var context = new EducationContext())
             {
                 
-                var anas = context.Teachers.FirstOrDefault(t => t.Name == "Anas");
+                var anas = context.Teachers.FirstOrDefault(t => t.Name == "Anna Svensson");
                 
                 var reidar = context.Teachers.FirstOrDefault(t => t.Name == "Reidar");
 
@@ -90,6 +92,8 @@ namespace Labb_1__LINQ
                     Console.WriteLine("En eller båda lärarna kunde inte hittas.");
                 }
             }
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
 
 
         }
